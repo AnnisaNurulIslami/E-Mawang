@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".auth.CreateAccountAdmin">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/login_page"
+        android:src="@drawable/registercuate" />
+
+    <!-- Bottom Rounded Background -->
+    <View
+        android:id="@+id/bottomBackground"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_below="@id/logoImage"
+        android:background="@drawable/bg_whitebottoom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImage">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/welcomeText"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/nameLabel"
+                android:layout_marginTop="20dp"
+                android:text="@string/create_account" />
+
+            <!-- Name Label -->
+            <TextView
+                android:id="@+id/nameLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcomeText"
+                android:layout_alignStart="@id/et_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_name" />
+
+            <!-- Name Input Box -->
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_name"
+                style="@style/et_text"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/nameLabel"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
+
+            <!-- Email Label -->
+            <TextView
+                android:id="@+id/emailLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_name"
+                android:layout_alignStart="@id/et_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_email" />
+
+            <!-- Email Input Box -->
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/et_text"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/emailLabel"
+                android:layout_alignStart="@id/emailLabel"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/roleLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_email"
+                android:layout_alignStart="@id/et_email"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_role" />
+
+            <Spinner
+                android:id="@+id/spinnerRole"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/roleLabel"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_et"
+                android:layout_below="@id/roleLabel"/>
+
+            <!-- RT/RW Label -->
+            <LinearLayout
+                android:id="@+id/rt_rwLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerRole"
+                android:orientation="horizontal"
+                android:layout_alignStart="@id/et_email"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_rt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rt"
+                    style="@style/subtitle" />
+
+                <TextView
+                    android:id="@+id/tv_rw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rw"
+                    style="@style/subtitle"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="167dp"/>
+            </LinearLayout>
+
+            <!-- RT/RW Spinner -->
+            <LinearLayout
+                android:id="@+id/rt_rwSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rt_rwLabel"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/et_email">
+
+                <Spinner
+                    android:id="@+id/spinner_rt"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:background="@drawable/bg_et" />
+
+                <Spinner
+                    android:id="@+id/spinner_rw"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/bg_et" />
+            </LinearLayout>
+
+            <!-- Lingkungan Label -->
+            <TextView
+                android:id="@+id/lingkunganLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_lingkungan"
+                style="@style/subtitle"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/et_email"
+                android:layout_below="@id/rt_rwSpinner" />
+
+            <!-- Lingkungan Spinner -->
+            <Spinner
+                android:id="@+id/spinner_lingkungan"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/lingkunganLabel"
+                android:layout_alignStart="@id/lingkunganLabel"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_et" />
+
+            <!-- Password Label -->
+            <TextView
+                android:id="@+id/passwordLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_lingkungan"
+                android:layout_alignStart="@id/lingkunganLabel"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_password" />
+
+            <!-- Password Input Box -->
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_password"
+                style="@style/et_text"
+                android:layout_alignStart="@+id/passwordLabel"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/passwordLabel"
+                android:inputType="textPassword"
+                android:autofillHints="" />
+
+            <!-- Sign In Button -->
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:text="@string/submit"
+                android:background="@drawable/bg_button"
+                style="@style/text_button"
+                android:layout_alignStart="@id/et_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/et_password" />
+
+            <!-- Sign Up Link -->
+            <LinearLayout
+                android:id="@+id/text_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_register"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/tv_ask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/undo"
+                    style="@style/subtitle"/>
+
+                <TextView
+                    android:id="@+id/tv_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/here"
+                    style="@style/blue_text"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

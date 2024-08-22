@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                style="@style/title"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"/>
+
+            <!-- Name Label -->
+            <TextView
+                android:id="@+id/nameLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_dashboard"
+                android:layout_alignStart="@id/et_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_name" />
+
+            <!-- Name Input Box -->
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_name"
+                style="@style/et_text"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/nameLabel"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
+
+            <!-- NIK Label -->
+            <TextView
+                android:id="@+id/nikLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_name"
+                android:layout_alignStart="@id/et_nik"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_nik" />
+
+            <!-- NIK Input Box -->
+            <EditText
+                android:id="@+id/et_nik"
+                style="@style/et_text"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/nikLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_nik"
+                android:inputType="number" />
+
+            <!-- TTL Label -->
+            <TextView
+                android:id="@+id/ttlLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_nik"
+                android:layout_alignStart="@id/et_ttl"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_ttl" />
+
+            <!-- TTL Input Box -->
+            <EditText
+                android:id="@+id/et_ttl"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_ttl"
+                style="@style/et_text"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/ttlLabel"
+                android:inputType="text"
+                android:autofillHints="" />
+
+            <!-- Religion Label -->
+            <TextView
+                android:id="@+id/religionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_religion"
+                style="@style/subtitle"
+                android:layout_alignStart="@id/spinner_religion"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/et_ttl" />
+
+            <!-- Religion Spinner -->
+            <Spinner
+                android:id="@+id/spinner_religion"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/religionLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_et" />
+
+            <!-- Job Label -->
+            <TextView
+                android:id="@+id/jobLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_religion"
+                android:layout_alignStart="@id/et_job"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_job" />
+
+            <!-- Job Input Box -->
+            <EditText
+                android:id="@+id/et_job"
+                style="@style/et_text"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/jobLabel"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_job"
+                android:inputType="text" />
+
+            <!-- Address Label -->
+            <TextView
+                android:id="@+id/addressLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_job"
+                android:layout_alignStart="@id/et_address"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_address" />
+
+            <!-- Address Input Box -->
+            <EditText
+                android:id="@+id/et_address"
+                style="@style/et_text"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/addressLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_address"
+                android:inputType="text" />
+
+            <!-- Letter Label -->
+            <TextView
+                android:id="@+id/letterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_letter"
+                style="@style/subtitle"
+                android:layout_alignStart="@id/et_address"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/et_address" />
+
+            <!-- Letter Spinner -->
+            <Spinner
+                android:id="@+id/spinner_letter"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/letterLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_et" />
+
+            <!-- Information Link -->
+            <TextView
+                android:id="@+id/tv_here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_info"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/spinner_letter"
+                android:layout_below="@id/spinner_letter"
+                style="@style/blue_text"/>
+
+            <!-- Information Text -->
+            <TextView
+                android:id="@+id/tv_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_upload"
+                android:layout_alignStart="@id/tv_here"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tv_here"
+                style="@style/subtitle"/>
+
+            <!-- Document -->
+
+            <LinearLayout
+                android:id="@+id/choose_file"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_et"
+                android:layout_below="@id/tv_ask"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/buttonPickFiles"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:text="@string/choose_file"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    style="@style/button_file"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:layout_marginTop="10dp"
+                    tools:listitem="@layout/item_file"/>
+            </LinearLayout>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/choose_file"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/submit" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

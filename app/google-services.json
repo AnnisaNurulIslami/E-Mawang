@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "904484202756",
+    "firebase_url": "https://persuratan-mawang-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "persuratan-mawang",
+    "storage_bucket": "persuratan-mawang.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904484202756:android:f10a831a2d8d8148bdc851",
+        "android_client_info": {
+          "package_name": "com.kyuu.persuratanmawang"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBNvVINA2Bd2a9QScl6tSLKHnG0Q3AOzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

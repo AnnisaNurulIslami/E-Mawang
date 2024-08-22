@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".ui.InfoActivity">
+
+    <!-- Bottom Rounded Background -->
+    <View
+        android:id="@+id/bottomBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_whitebottoom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_min="700dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:contentDescription="@string/login_page"
+        android:src="@drawable/checklistcuate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/requirements"
+        style="@style/title"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toTopOf="@id/bottomBackground"/>
+
+    <!-- Scroll View to contain content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- KK Label -->
+            <TextView
+                android:id="@+id/sub_kk"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:text="@string/tv_kk" />
+
+            <!-- KK Content -->
+            <TextView
+                android:id="@+id/tv_kk"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_kk"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_kk" />
+
+            <!-- KTP Label -->
+            <TextView
+                android:id="@+id/sub_ktp"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_kk"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_ktp" />
+
+            <!-- KTP Content -->
+            <TextView
+                android:id="@+id/tv_ktp"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_ktp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_ktp" />
+
+            <!-- Tidak Mampu Label -->
+            <TextView
+                android:id="@+id/sub_tidak_mampu"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_ktp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_tidak_mampu" />
+
+            <!-- Tidak Mampu Content -->
+            <TextView
+                android:id="@+id/tv_tidak_mampu"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_tidak_mampu"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_tidak_mampu" />
+
+            <!-- Pindah Label -->
+            <TextView
+                android:id="@+id/sub_pindah"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tidak_mampu"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_pindah" />
+
+            <!-- Pindah Content -->
+            <TextView
+                android:id="@+id/tv_pindah"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_pindah"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_pindah" />
+
+            <!-- Kelahiran Label -->
+            <TextView
+                android:id="@+id/sub_kelahiran"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pindah"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_kelahiran" />
+
+            <!-- Kelahiran Content -->
+            <TextView
+                android:id="@+id/tv_kelahiran"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_kelahiran"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_kelahiran" />
+
+            <!-- Kematian Label -->
+            <TextView
+                android:id="@+id/sub_kematian"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_kelahiran"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_kematian" />
+
+            <!-- Kematian Content -->
+            <TextView
+                android:id="@+id/tv_kematian"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_kematian"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_kematian" />
+
+            <!-- Beasiswa Label -->
+            <TextView
+                android:id="@+id/sub_beasiswa"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_kematian"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_beasiswa" />
+
+            <!-- Beasiswa Content -->
+            <TextView
+                android:id="@+id/tv_beasiswa"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_beasiswa"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_beasiswa" />
+
+            <!-- SKCK Label -->
+            <TextView
+                android:id="@+id/sub_skck"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_beasiswa"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_skck" />
+
+            <!-- SKCK Content -->
+            <TextView
+                android:id="@+id/tv_skck"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_skck"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_skck" />
+
+            <!-- Nikah Label -->
+            <TextView
+                android:id="@+id/sub_nikah"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_skck"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_nikah" />
+
+            <!-- Nikah Content -->
+            <TextView
+                android:id="@+id/tv_nikah"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_nikah"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_nikah" />
+
+            <!-- Usaha Label -->
+            <TextView
+                android:id="@+id/sub_usaha"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nikah"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_usaha" />
+
+            <!-- Usaha Content -->
+            <TextView
+                android:id="@+id/tv_usaha"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_usaha"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_usaha" />
+
+            <!-- SITU Label -->
+            <TextView
+                android:id="@+id/sub_situ"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_usaha"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_situ" />
+
+            <!-- SITU Content -->
+            <TextView
+                android:id="@+id/tv_situ"
+                style="@style/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_situ"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/requirements_situ" />
+
+            <!-- Understand Button -->
+            <Button
+                android:id="@+id/btnMengerti"
+                style="@style/text_button"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/tv_situ"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="229dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/understand" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".auth.ForgotPassActivity">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/login_page"
+        android:src="@drawable/forgotcuate" />
+
+    <!-- Bottom Rounded Background -->
+    <View
+        android:id="@+id/bottomBackground"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/bg_whitebottoom"
+        android:layout_below="@id/logoImage"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoImage"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/forgot_welcome"
+        android:textSize="26sp" />
+
+    <!-- Instruction -->
+    <TextView
+        android:id="@+id/instruction"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/tv_instruction" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/emailLabel"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instruction"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_email" />
+
+    <!-- Email Input Box -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/emailLabel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:autofillHints=""
+        style="@style/et_text"
+        android:background="@drawable/bg_et"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress" />
+
+    <!-- Sign In Button -->
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:text="@string/reset"
+        android:background="@drawable/bg_button"
+        style="@style/text_button"
+        android:layout_below="@id/et_email"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp" />
+
+    <!-- Sign Up Link -->
+    <LinearLayout
+        android:id="@+id/text_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_reset"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/tv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_account_ask"
+            style="@style/subtitle"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/here"
+            style="@style/blue_text"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

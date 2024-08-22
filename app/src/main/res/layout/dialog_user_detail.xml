@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editUserNameDetail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_et"
+        android:hint="@string/input_name"
+        style="@style/et_text"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editUserEmailDetail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        android:padding="12dp"
+        style="@style/et_text"
+        android:background="@drawable/bg_et"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinnerUserRtDetail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        android:padding="12dp"
+        style="@style/et_text"
+        android:background="@drawable/bg_et"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinnerUserRwDetail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_et"
+        style="@style/et_text"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinnerUserLingkunganDetail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_et"
+        style="@style/et_text"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_button"
+            style="@style/text_button"
+            android:text="@string/update" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:text="@string/delete"
+            android:background="@drawable/bg_button"
+            style="@style/text_button"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

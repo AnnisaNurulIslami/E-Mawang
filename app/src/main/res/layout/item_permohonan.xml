@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_info"
+    android:layout_marginBottom="16dp"
+    android:paddingTop="10dp"
+    android:paddingStart="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/tv_letter_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/letter_type"
+        android:fontFamily="@font/league_spartan_semi_bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_applicant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applicant_name"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_upload_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_date"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

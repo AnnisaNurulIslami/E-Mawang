@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Title -->
+            <TextView
+                android:id="@+id/text_notifications"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp" />
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/nameLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_notifications"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_name"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_name"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/nameLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanNama"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/emailLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_name"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_email"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_email"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/emailLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanEmail"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- RT/RW -->
+            <LinearLayout
+                android:id="@+id/rt_rwLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_email"
+                android:orientation="horizontal"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_rt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rt"
+                    android:textSize="16sp"
+                    style="@style/subtitle" />
+
+                <TextView
+                    android:id="@+id/tv_rw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rw"
+                    style="@style/subtitle"
+                    android:textSize="16sp"
+                    android:layout_marginStart="165dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rt_rw_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rt_rwLabel"
+                android:layout_marginStart="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <!-- RT -->
+                <LinearLayout
+                    android:id="@+id/text_rt"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_info"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tampilanRt"
+                        style="@style/blue_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <!-- RW -->
+                <LinearLayout
+                    android:id="@+id/text_rw"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_info"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tampilanRw"
+                        style="@style/blue_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Lingkungan -->
+            <TextView
+                android:id="@+id/lingkunganLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_lingkungan"
+                style="@style/subtitle"
+                android:textSize="16sp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/rt_rw_info" />
+
+            <LinearLayout
+                android:id="@+id/text_lingkungan"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/lingkunganLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanLingkungan"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Account Settings -->
+            <TextView
+                android:id="@+id/text_account_settings"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_lingkungan"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="40dp"
+                android:textSize="20sp"
+                android:text="@string/account_setting" />
+
+            <!-- Delete Account Button -->
+            <Button
+                android:id="@+id/button_delete_account"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/text_account_settings"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/delete_account" />
+
+            <!-- Change Password Button -->
+            <Button
+                android:id="@+id/button_change_password"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button_delete_account"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/change_password" />
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/button_logout"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button_change_password"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/logout" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

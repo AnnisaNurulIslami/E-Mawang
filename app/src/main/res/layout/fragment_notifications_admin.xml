@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.notifications.NotificationsAdminFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/text_notifications"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/text_rt_settings"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp" />
+
+            <!-- RT Settings -->
+            <TextView
+                android:id="@+id/text_rt_settings"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_notifications"
+                android:layout_alignStart="@id/rt_recycler_view"
+                android:layout_marginTop="13dp"
+                android:textSize="14sp"
+                android:text="@string/rt_setting" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rt_recycler_view"
+                android:layout_width="330dp"
+                android:layout_height="167dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/text_rt_settings"
+                tools:listitem="@layout/item_role"
+                android:layout_marginTop="10dp" />
+
+            <!-- RW Settings -->
+            <TextView
+                android:id="@+id/text_rw_settings"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rt_recycler_view"
+                android:layout_alignStart="@id/rt_recycler_view"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="@string/rw_setting" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rw_recycler_view"
+                android:layout_width="330dp"
+                android:layout_height="167dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/text_rw_settings"
+                tools:listitem="@layout/item_role"
+                android:layout_marginTop="10dp" />
+
+            <!-- KL Setting -->
+            <TextView
+                android:id="@+id/text_kl_settings"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rw_recycler_view"
+                android:layout_alignStart="@id/rw_recycler_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="@string/kl_setting" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kl_recycler_view"
+                android:layout_width="330dp"
+                android:layout_height="111dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignStart="@id/text_kl_settings"
+                tools:listitem="@layout/item_role"
+                android:layout_below="@id/text_kl_settings"
+                android:layout_marginTop="10dp" />
+
+            <!-- Account Settings -->
+            <TextView
+                android:id="@+id/text_account_settings"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kl_recycler_view"
+                android:layout_alignStart="@id/kl_recycler_view"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:text="@string/account_setting" />
+
+            <!-- New Account Button -->
+            <Button
+                android:id="@+id/button_new_account"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/text_account_settings"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/new_account" />
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/button_logout"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button_new_account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/logout" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

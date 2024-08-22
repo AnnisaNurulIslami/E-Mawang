@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".auth.LoginActivity">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/login_page"
+        android:src="@drawable/logincuate" />
+
+    <!-- Bottom Rounded Background -->
+    <View
+        android:id="@+id/bottomBackground"
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:background="@drawable/bg_whitebottoom"
+        android:layout_below="@id/logoImage"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bottomBackground"
+        android:layout_alignStart="@id/emailLabel"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_in"
+        android:textSize="26sp" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/emailLabel"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_alignStart="@id/et_email"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_email" />
+
+    <!-- Email Input Box -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/emailLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        style="@style/et_text"
+        android:background="@drawable/bg_et"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress" />
+
+    <!-- Password Label -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email"
+        android:layout_alignStart="@id/et_email"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_password" />
+
+    <!-- Password Input Box -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/passwordLabel"
+        android:layout_alignStart="@id/et_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        style="@style/et_text"
+        android:autofillHints=""
+        android:background="@drawable/bg_et"
+        android:hint="@string/input_password"
+        android:inputType="textPassword" />
+
+    <!-- Forgot Password Label -->
+    <TextView
+        android:id="@+id/tv_forgetPassword"
+        style="@style/blue_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_password"
+        android:layout_alignStart="@id/passwordLabel"
+        android:layout_marginTop="12dp"
+        android:text="@string/forgot_password"
+        android:textSize="14sp" />
+
+    <!-- Sign In Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:text="@string/sign_in"
+        android:background="@drawable/bg_button"
+        style="@style/text_button"
+        android:layout_below="@id/tv_forgetPassword"
+        android:layout_alignStart="@id/passwordLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <!-- Sign In Link -->
+    <LinearLayout
+        android:id="@+id/text_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="31dp">
+
+        <TextView
+            android:id="@+id/tv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account"
+            style="@style/subtitle"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/here"
+            style="@style/blue_text"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

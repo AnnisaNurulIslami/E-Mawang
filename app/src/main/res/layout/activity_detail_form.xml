@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".ui.DetailFormActivity">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:contentDescription="@string/login_page"
+        android:src="@drawable/documentcuate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom Rounded Background -->
+    <View
+        android:id="@+id/bottomBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_whitebottoom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_min="700dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/detail_page"
+        style="@style/title"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/bottomBackground"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/title_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/nameLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_name"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_name"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/nameLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanNama"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- NIK -->
+            <TextView
+                android:id="@+id/nikLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_name"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_nik"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_nik"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/nikLabel"
+                android:layout_alignStart="@id/text_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanNIK"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- TTL -->
+            <TextView
+                android:id="@+id/ttlLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_nik"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_ttl"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_ttl"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/ttlLabel"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/text_name"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanTTL"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Religion -->
+            <TextView
+                android:id="@+id/religionLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_ttl"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_religion"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_religion"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/religionLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/text_name"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanReligion"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Job -->
+            <TextView
+                android:id="@+id/jobLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_religion"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_job"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_job"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/jobLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanJob"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Address -->
+            <TextView
+                android:id="@+id/addressLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_job"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_address"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_address"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/addressLabel"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanAddress"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- RT/RW -->
+            <LinearLayout
+                android:id="@+id/rt_rwLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_address"
+                android:orientation="horizontal"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_rt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rt"
+                    android:textSize="16sp"
+                    style="@style/subtitle" />
+
+                <TextView
+                    android:id="@+id/tv_rw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_rw"
+                    style="@style/subtitle"
+                    android:textSize="16sp"
+                    android:layout_marginStart="160dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rt_rw_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rt_rwLabel"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="39dp"
+                android:orientation="horizontal">
+
+                <!-- RT -->
+                <LinearLayout
+                    android:id="@+id/text_rt"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_info"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tampilanRt"
+                        style="@style/blue_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <!-- RW -->
+                <LinearLayout
+                    android:id="@+id/text_rw"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_info"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tampilanRw"
+                        style="@style/blue_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Lingkungan -->
+            <TextView
+                android:id="@+id/lingkunganLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_lingkungan"
+                style="@style/subtitle"
+                android:textSize="16sp"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/rt_rw_info" />
+
+            <LinearLayout
+                android:id="@+id/text_lingkungan"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/lingkunganLabel"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanLingkungan"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Letter -->
+            <TextView
+                android:id="@+id/letterLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_lingkungan"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_letter"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/text_letter"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/letterLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_info"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tampilanLetter"
+                    style="@style/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Document -->
+            <TextView
+                android:id="@+id/documentLabel"
+                style="@style/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_letter"
+                android:layout_alignStart="@id/text_name"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_document"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/list_file"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_info"
+                android:layout_below="@id/documentLabel"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignStart="@id/documentLabel"
+                android:padding="12dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    tools:listitem="@layout/item_detail_file"/>
+            </LinearLayout>
+
+            <!-- Accept/Reject -->
+            <TextView
+                android:id="@+id/tv_accept_reject"
+                style="@style/subtitle"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/list_file"
+                android:layout_alignStart="@id/documentLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_accept"
+                android:textSize="16sp" />
+
+            <!-- Notes Input Box -->
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/tv_accept_reject"
+                android:layout_alignStart="@id/tv_accept_reject"
+                android:layout_marginTop="15dp"
+                android:autofillHints=""
+                style="@style/et_text"
+                android:background="@drawable/bg_et"
+                android:hint="@string/input_notes"
+                android:inputType="textEmailAddress" />
+
+            <!-- Done Button -->
+            <Button
+                android:id="@+id/btnDone"
+                style="@style/text_button"
+                android:layout_width="330dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/notes"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/done" />
+
+            <!-- Accept Reject Button -->
+            <LinearLayout
+                android:id="@+id/btn_accept_reject"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/notes"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:layout_centerHorizontal="true">
+
+                <!-- Reject Button -->
+                <Button
+                    android:id="@+id/btnReject"
+                    style="@style/text_button"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/reject" />
+
+                <!-- Accept Button -->
+                <Button
+                    android:id="@+id/btnAccept"
+                    style="@style/text_button"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/accept" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
