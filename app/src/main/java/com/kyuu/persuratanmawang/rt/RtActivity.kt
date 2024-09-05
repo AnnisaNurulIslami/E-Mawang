@@ -37,6 +37,8 @@ class RtActivity : AppCompatActivity() {
     private lateinit var permohonanListener: ValueEventListener
 
     private var userRt: String? = null
+    private var userRw: String? = null
+    private var userLingkungan: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,9 +79,12 @@ class RtActivity : AppCompatActivity() {
         userRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userRt = snapshot.child("rt").value as? String
+                userRw = snapshot.child("rw").value as? String
+                userLingkungan = snapshot.child("lingkungan").value as? String
+
                 if (userRt != null) {
                     Log.d("RtActivity", "User RT: $userRt")
-                    loadPermohonanData(userRt!!)
+                    loadPermohonanData(userRt!!, userRw!!, userLingkungan!!)
                 } else {
                     Log.e("RtActivity", "User RT is not available")
                     Toast.makeText(this@RtActivity, "User RT is not available", Toast.LENGTH_SHORT).show()
@@ -93,7 +98,7 @@ class RtActivity : AppCompatActivity() {
         })
     }
 
-    private fun loadPermohonanData(rt: String) {
+    private fun loadPermohonanData(rt: String, rw: String, lingkungan: String) {
         if (auth.currentUser == null) {
             Log.e("RtActivity", "User is not authenticated")
             return
@@ -107,12 +112,9 @@ class RtActivity : AppCompatActivity() {
                     for (permohonanSnapshot in uidSnapshot.children) {
                         try {
                             val permohonan = permohonanSnapshot.getValue(PermohonanTes::class.java)
-                            if (permohonan?.rt == rt && permohonan?.status == "Menunggu Persetujuan RT") {
+                            if (permohonan?.rt == rt && permohonan?.rw == rw && permohonan.lingkungan == lingkungan && permohonan?.status == "Menunggu Persetujuan RT") {
                                 permohonanList.add(permohonan)
                                 Log.d("RtActivity", "Permohonan added: $permohonan")
-//                                if (permohonan.notificationStatus == "Ada surat yang memerlukan persetujuan RT") {
-//                                    showNotification("Ada Permohonan Baru", "Ada surat yang memerlukan persetujuan RT")
-//                                }
                             }
                         } catch (e: DatabaseException) {
                             Log.e("RtActivity", "Error converting snapshot to PermohonanTes", e)
